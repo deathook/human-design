@@ -1,0 +1,495 @@
+"""
+Khởi tạo dữ liệu 36 KÊNH KẾT NỐI (CHANNELS)
+Theo bảng tổng hợp trang 354-356 và chi tiết Chương 7 trong sách
+"""
+import json
+import os
+import sys
+
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
+
+DATA_DIR = r"C:\HumanDesign\core\data"
+
+channels_data = {
+    # 1. NHÓM KÊNH KHỞI XƯỚNG (4 Kênh)
+    "12-22": {
+        "id": "12-22",
+        "name_vi": "Sự Cởi Mở",
+        "name_en": "Openness",
+        "gates": [12, 22],
+        "centers": ["Throat", "Solar_Plexus"],
+        "centers_vi": ["Trung tâm Tuệ Ngôn (Họng)", "Trung tâm Đám Rối Dương (Thái Dương)"],
+        "group": "Khởi Xướng",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Trực Giác",
+        "description": "Khả năng truyền cảm hứng, động viên người khác thông qua lời nói và hành động chân thực. Biểu đạt cảm xúc và kinh nghiệm bằng giọng nói đầy sức hút tự nhiên.",
+        "advice": "Diễn đạt cảm xúc chân thực, tạo sự thu hút tự nhiên trong mọi tình huống, xây dựng môi trường tích cực và hòa hợp."
+    },
+    "20-34": {
+        "id": "20-34",
+        "name_vi": "Sự Lôi Cuốn",
+        "name_en": "Charisma",
+        "gates": [20, 34],
+        "centers": ["Throat", "Sacral"],
+        "centers_vi": ["Trung tâm Tuệ Ngôn (Họng)", "Trung tâm Đan Điền (Sinh Khí)"],
+        "group": "Khởi Xướng",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Hội Nhập",
+        "description": "Năng động, nhiệt tình, tràn đầy năng lượng sống. Biến sức sống bẩm sinh thành hành động tức thời, là kênh duy nhất trực tiếp tạo nên Khởi Xướng Vận Hành.",
+        "advice": "Cần cân bằng giữa làm việc chăm chỉ và nghỉ ngơi để tránh kiệt sức; kiên nhẫn phát triển bản thân thay vì vội vã hành động."
+    },
+    "21-45": {
+        "id": "21-45",
+        "name_vi": "Kim Tiền",
+        "name_en": "Money",
+        "gates": [21, 45],
+        "centers": ["Heart", "Throat"],
+        "centers_vi": ["Trung tâm Tâm Ngã (Tim)", "Trung tâm Tuệ Ngôn (Họng)"],
+        "group": "Khởi Xướng",
+        "circuit": "Bộ Lạc",
+        "subcircuit": "Bản Ngã",
+        "description": "Khả năng quản lý tài chính, kiểm soát tài nguyên và lãnh đạo đội nhóm. Mang lại luồng gió mới, biết đầu tư hiệu quả và thấu suốt nơi cần nguồn lực.",
+        "advice": "Sử dụng tài năng quản lý và đầu tư vì lợi ích chung của cộng đồng, duy trì tầm nhìn chiến lược và kiên trì đổi mới."
+    },
+    "35-36": {
+        "id": "35-36",
+        "name_vi": "Sự Linh Động (Sự Linh Hoạt)",
+        "name_en": "Transitoriness",
+        "gates": [35, 36],
+        "centers": ["Throat", "Solar_Plexus"],
+        "centers_vi": ["Trung tâm Tuệ Ngôn (Họng)", "Trung tâm Đám Rối Dương (Thái Dương)"],
+        "group": "Khởi Xướng",
+        "circuit": "Tập Thể",
+        "subcircuit": "Cảm Nhận",
+        "description": "Người tìm kiếm trải nghiệm mới để vượt qua sự hỗn loạn và nâng cấp bản thân. Trải qua những thăng trầm cảm xúc để gặt hái bài học trí tuệ sâu sắc.",
+        "advice": "Loại bỏ kỳ vọng và ảo tưởng, tận hưởng mỗi hành trình như một trải nghiệm mới, đối mặt thử thách với tâm thái chấp nhận."
+    },
+
+    # 2. NHÓM KÊNH VẬN HÀNH (10 Kênh)
+    "02-14": {
+        "id": "02-14",
+        "name_vi": "Sự Kích Hoạt",
+        "name_en": "The Beat",
+        "gates": [2, 14],
+        "centers": ["G_Center", "Sacral"],
+        "centers_vi": ["Trung tâm Thượng Ngã (Ngực)", "Trung tâm Đan Điền (Sinh Khí)"],
+        "group": "Vận Hành",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Trực Giác",
+        "description": "Tài năng bẩm sinh trong tổ chức, định hướng và tạo ra của cải vật chất. Năng lượng guồng máy mạnh mẽ cần chất xúc tác từ môi trường để bùng nổ.",
+        "advice": "Tìm kiếm cộng đồng và người đồng hành thúc đẩy năng lượng, sử dụng trực giác để đưa nguồn lực đến đúng mục đích."
+    },
+    "03-60": {
+        "id": "03-60",
+        "name_vi": "Sự Đột Biến",
+        "name_en": "Mutation",
+        "gates": [3, 60],
+        "centers": ["Sacral", "Root"],
+        "centers_vi": ["Trung tâm Đan Điền (Sinh Khí)", "Trung tâm Gốc"],
+        "group": "Vận Hành",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Trực Giác",
+        "description": "Quá trình chuyển đổi bản thân liên tục qua thích ứng với thử thách. Năng lượng biến đổi nhảy vọt, kết hợp giữa truyền thống và sự đổi mới.",
+        "advice": "Chấp nhận sự biến đổi tự nhiên, quản lý căng thẳng và biến áp lực thành động lực đổi mới sáng tạo."
+    },
+    "06-59": {
+        "id": "06-59",
+        "name_vi": "Sự Thân Mật",
+        "name_en": "Mating",
+        "gates": [6, 59],
+        "centers": ["Solar_Plexus", "Sacral"],
+        "centers_vi": ["Trung tâm Đám Rối Dương", "Trung tâm Đan Điền (Sinh Khí)"],
+        "group": "Vận Hành",
+        "circuit": "Bộ Lạc",
+        "subcircuit": "Phòng Thủ",
+        "description": "Khả năng phá bỏ rào cản vô hình giữa người với người, tạo dựng mối quan hệ thân mật sâu sắc, nuôi dưỡng sự sinh sôi và gắn kết bền chặt.",
+        "advice": "Tận dụng sự thấu cảm để kết nối trong công việc, tình bạn và gia đình; sử dụng năng lượng để xây dựng lòng tin và giải quyết xung đột."
+    },
+    "09-52": {
+        "id": "09-52",
+        "name_vi": "Sự Tập Trung",
+        "name_en": "Concentration",
+        "gates": [9, 52],
+        "centers": ["Sacral", "Root"],
+        "centers_vi": ["Trung tâm Đan Điền (Sinh Khí)", "Trung tâm Gốc"],
+        "group": "Vận Hành",
+        "circuit": "Tập Thể",
+        "subcircuit": "Hiểu Biết",
+        "description": "Năng lượng 'Năng đoạn kim cương'. Khả năng nghiên cứu sâu sắc, tập trung làm việc kiên trì nhiều giờ không bị quấy rầy, biến áp lực thành năng suất.",
+        "advice": "Dành cho các dự án chi tiết, tư duy phân tích, đồng thời đảm bảo thời gian nghỉ ngơi để duy trì nguồn năng lượng bền vững."
+    },
+    "15-05": {
+        "id": "15-05",
+        "name_vi": "Dòng Chảy",
+        "name_en": "Rhythm",
+        "gates": [5, 15],
+        "centers": ["Sacral", "G_Center"],
+        "centers_vi": ["Trung tâm Đan Điền (Sinh Khí)", "Trung tâm Thượng Ngã (Ngực)"],
+        "group": "Vận Hành",
+        "circuit": "Tập Thể",
+        "subcircuit": "Hiểu Biết",
+        "description": "Làm chủ nhịp điệu tự nhiên của cuộc sống, sống hòa hợp với dòng chảy vũ trụ, bảo tồn thiên nhiên và trở thành tấm gương sáng về sự cân bằng.",
+        "advice": "Sống thuận theo tự nhiên, duy trì nhịp sinh học lành mạnh và lan tỏa năng lượng bình an, hài hòa đến xung quanh."
+    },
+    "27-50": {
+        "id": "27-50",
+        "name_vi": "Sự Bảo Tồn",
+        "name_en": "Preservation",
+        "gates": [27, 50],
+        "centers": ["Sacral", "Spleen"],
+        "centers_vi": ["Trung tâm Đan Điền (Sinh Khí)", "Trung tâm Sinh Giác (Lách)"],
+        "group": "Vận Hành",
+        "circuit": "Bộ Lạc",
+        "subcircuit": "Phòng Thủ",
+        "description": "Năng lượng người mẹ: quan tâm, chăm sóc và nuôi dưỡng sâu sắc. Bảo vệ những giá trị cốt lõi, bảo đảm sự an toàn và phúc lợi cho gia đình, cộng đồng.",
+        "advice": "Học cách chăm sóc bản thân trước tiên, đặt ranh giới lành mạnh để không bị kiệt sức hoặc bị người khác lợi dụng."
+    },
+    "34-10": {
+        "id": "34-10",
+        "name_vi": "Sự Khám Phá",
+        "name_en": "Exploration",
+        "gates": [10, 34],
+        "centers": ["G_Center", "Sacral"],
+        "centers_vi": ["Trung tâm Thượng Ngã (Ngực)", "Trung tâm Đan Điền (Sinh Khí)"],
+        "group": "Vận Hành",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Tập Trung",
+        "description": "Hiện thực hóa bản thân qua hành động đúng chuẩn nguyên tắc và lòng chính trực. Là ngọn đuốc soi đường giúp người khác tìm thấy chính mình.",
+        "advice": "Luôn sống trung thực với giá trị riêng, kiên định bảo vệ lẽ phải và sẵn sàng dấn thân vào các trải nghiệm mới."
+    },
+    "42-53": {
+        "id": "42-53",
+        "name_vi": "Sự Trưởng Thành",
+        "name_en": "Maturation",
+        "gates": [42, 53],
+        "centers": ["Sacral", "Root"],
+        "centers_vi": ["Trung tâm Đan Điền (Sinh Khí)", "Trung tâm Gốc"],
+        "group": "Vận Hành",
+        "circuit": "Tập Thể",
+        "subcircuit": "Cảm Nhận",
+        "description": "Năng lượng chu kỳ: tham gia trọn vẹn từ lúc khởi đầu đến khi hoàn thành. Bậc thầy điều phối dự án, tích lũy bài học và nâng cao năng lực quản lý.",
+        "advice": "Chọn đúng dự án đáng giá để dốc sức từ đầu đến cuối; quản lý tiến độ cẩn thận và chắt lọc kinh nghiệm sau mỗi chu kỳ."
+    },
+    "46-29": {
+        "id": "46-29",
+        "name_vi": "Khám Phá (Phát Kiến)",
+        "name_en": "Discovery",
+        "gates": [29, 46],
+        "centers": ["Sacral", "G_Center"],
+        "centers_vi": ["Trung tâm Đan Điền (Sinh Khí)", "Trung tâm Thượng Ngã (Ngực)"],
+        "group": "Vận Hành",
+        "circuit": "Tập Thể",
+        "subcircuit": "Cảm Nhận",
+        "description": "Lao vào cuộc sống với sự cam kết trọn vẹn của thể xác. Tôn vinh cơ thể vật lý, thưởng thức cuộc sống qua các giác quan và biến điều bình thường thành kỳ diệu.",
+        "advice": "Cam kết có chọn lọc theo đúng phản hồi Đan Điền, gắn kết với thiên nhiên và chăm sóc sức khỏe thể chất chu đáo."
+    },
+    "57-34": {
+        "id": "57-34",
+        "name_vi": "Sự Nhạy Bén",
+        "name_en": "Power",
+        "gates": [34, 57],
+        "centers": ["Sacral", "Spleen"],
+        "centers_vi": ["Trung tâm Đan Điền (Sinh Khí)", "Trung tâm Sinh Giác (Lách)"],
+        "group": "Vận Hành",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Hội Nhập",
+        "description": "Sự kết hợp giữa trực giác tức thời và sức mạnh sinh lực. Nhận biết và hành động nhạy bén để tự bảo vệ, sống trọn vẹn trong từng khoảnh khắc.",
+        "advice": "Vượt qua nỗi sợ hãi tiềm thức, tin tưởng vào tiếng thì thầm của trực giác và truyền cảm hứng sống tích cực cho mọi người."
+    },
+
+    # 3. NHÓM KÊNH HỖN HỢP (4 Kênh)
+    "16-48": {
+        "id": "16-48",
+        "name_vi": "Tài Năng",
+        "name_en": "The Wavelength",
+        "gates": [16, 48],
+        "centers": ["Throat", "Spleen"],
+        "centers_vi": ["Trung tâm Tuệ Ngôn (Họng)", "Trung tâm Sinh Giác (Lách)"],
+        "group": "Hỗn Hợp",
+        "circuit": "Tập Thể",
+        "subcircuit": "Hiểu Biết",
+        "description": "Khát khao đạt đến sự tinh thông và xuất sắc qua thực hành liên tục. Biến chiều sâu kiến thức thành kỹ năng trình diễn, sáng tạo và giảng dạy thực tế.",
+        "advice": "Vượt qua nỗi sợ 'chưa đủ giỏi', rèn luyện chuyên môn và tự tin bộc lộ tài năng độc đáo ra trước công chúng."
+    },
+    "20-10": {
+        "id": "20-10",
+        "name_vi": "Sự Thức Tỉnh",
+        "name_en": "Awakening",
+        "gates": [10, 20],
+        "centers": ["G_Center", "Throat"],
+        "centers_vi": ["Trung tâm Thượng Ngã (Ngực)", "Trung tâm Tuệ Ngôn (Họng)"],
+        "group": "Hỗn Hợp",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Hội Nhập",
+        "description": "Yêu bản thân và sống chân thực với Chân Ngã. Khả năng truyền đạt giá trị sống đích thực qua ngôn từ, lời nói và hành vi gương mẫu.",
+        "advice": "Sống đúng bản sắc, chăm sóc sức khỏe tim mạch và tuần hoàn máu, lan tỏa cảm hứng sống chân thật đến người khác."
+    },
+    "57-10": {
+        "id": "57-10",
+        "name_vi": "Sự Hoàn Hảo",
+        "name_en": "Perfected Form",
+        "gates": [10, 57],
+        "centers": ["G_Center", "Spleen"],
+        "centers_vi": ["Trung tâm Thượng Ngã (Ngực)", "Trung tâm Sinh Giác (Lách)"],
+        "group": "Hỗn Hợp",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Hội Nhập",
+        "description": "Trực giác sống còn kết nối với tình yêu và bản sắc. Khả năng định hướng hành vi đúng đắn và sinh tồn kỳ diệu giữa nghịch cảnh.",
+        "advice": "Chờ đợi sự công nhận và lời mời trước khi ra quyết định lớn, sử dụng trực giác để chăm sóc sức khỏe và phúc lợi cộng đồng."
+    },
+    "57-20": {
+        "id": "57-20",
+        "name_vi": "Minh Tường (Trực Giác Bộc Phát)",
+        "name_en": "The Brainwave",
+        "gates": [20, 57],
+        "centers": ["Throat", "Spleen"],
+        "centers_vi": ["Trung tâm Tuệ Ngôn (Họng)", "Trung tâm Sinh Giác (Lách)"],
+        "group": "Hỗn Hợp",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Trực Giác",
+        "description": "Nhà lãnh đạo bản năng, trực giác nhanh như chớp và diễn đạt tức thời. Nhận biết ngay điều gì lành mạnh và truyền đạt chính xác cho người khác.",
+        "advice": "Tin tưởng vào trực giác không cần qua lý giải của trí óc; rèn luyện khả năng truyền đạt rõ ràng, xúc tích."
+    },
+
+    # 4. NHÓM KÊNH KHAI VẤN (18 Kênh)
+    "01-08": {
+        "id": "01-08",
+        "name_vi": "Cảm Hứng",
+        "name_en": "Inspiration",
+        "gates": [1, 8],
+        "centers": ["G_Center", "Throat"],
+        "centers_vi": ["Trung tâm Thượng Ngã (Ngực)", "Trung tâm Tuệ Ngôn (Họng)"],
+        "group": "Khai Vấn",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Trực Giác",
+        "description": "Diễn đạt ý tưởng và cảm xúc sáng tạo một cách dễ tiếp cận. Thể hiện bản thân độc đáo và truyền cảm hứng cho người khác sống thật với chính mình.",
+        "advice": "Tập trung vào giá trị nội tại thay vì tìm kiếm sự công nhận từ bên ngoài; tham gia các hoạt động nghệ thuật, viết lách, thiết kế."
+    },
+    "07-31": {
+        "id": "07-31",
+        "name_vi": "Thủ Lĩnh",
+        "name_en": "The Alpha",
+        "gates": [7, 31],
+        "centers": ["G_Center", "Throat"],
+        "centers_vi": ["Trung tâm Thượng Ngã (Ngực)", "Trung tâm Tuệ Ngôn (Họng)"],
+        "group": "Khai Vấn",
+        "circuit": "Tập Thể",
+        "subcircuit": "Hiểu Biết",
+        "description": "Khí chất lãnh đạo tự nhiên bằng sự phụng sự và dân chủ. Tìm ra từ ngữ có trọng lượng để dẫn dắt cộng đồng đến tương lai tốt đẹp hơn.",
+        "advice": "Chờ đợi được cộng đồng công nhận và mời vào vị trí lãnh đạo; lãnh đạo bằng sự lắng nghe và truyền cảm hứng thay vì áp đặt."
+    },
+    "11-56": {
+        "id": "11-56",
+        "name_vi": "Sự Hiếu Kỳ",
+        "name_en": "Curiosity",
+        "gates": [11, 56],
+        "centers": ["Ajna", "Throat"],
+        "centers_vi": ["Trung tâm Tuệ Nhãn (Trán)", "Trung tâm Tuệ Ngôn (Họng)"],
+        "group": "Khai Vấn",
+        "circuit": "Tập Thể",
+        "subcircuit": "Cảm Nhận",
+        "description": "Người kể chuyện tài ba. Đầu óc như kênh Netflix không bao giờ cạn ý tưởng, kích thích tư duy và khơi gợi cảm xúc người nghe.",
+        "advice": "Chỉ chia sẻ ý tưởng khi được hỏi/được mời để tránh nói quá nhiều khiến người khác choáng ngợp; thực hành tĩnh lặng và chánh niệm."
+    },
+    "13-33": {
+        "id": "13-33",
+        "name_vi": "Sự Đúc Kết (Sự Buông Thả)",
+        "name_en": "The Prodigal",
+        "gates": [13, 33],
+        "centers": ["G_Center", "Throat"],
+        "centers_vi": ["Trung tâm Thượng Ngã (Ngực)", "Trung tâm Tuệ Ngôn (Họng)"],
+        "group": "Khai Vấn",
+        "circuit": "Tập Thể",
+        "subcircuit": "Cảm Nhận",
+        "description": "Cuốn sách lịch sử di động: lắng nghe, thu thập bí mật và bài học từ quá khứ, sau đó chia sẻ lại đúng thời điểm để soi đường cho hiện tại.",
+        "advice": "Bảo vệ sự riêng tư và giữ bí mật của người khác; rút lui tịnh dưỡng để chiêm nghiệm trước khi chia sẻ câu chuyện của mình."
+    },
+    "17-62": {
+        "id": "17-62",
+        "name_vi": "Sự Thừa Nhận",
+        "name_en": "Acceptance",
+        "gates": [17, 62],
+        "centers": ["Throat", "Ajna"],
+        "centers_vi": ["Trung tâm Tuệ Ngôn (Họng)", "Trung tâm Tuệ Nhãn (Trán)"],
+        "group": "Khai Vấn",
+        "circuit": "Tập Thể",
+        "subcircuit": "Hiểu Biết",
+        "description": "Tư duy phản biện xuất chúng: vừa nhìn thấy bức tranh tổng thể vừa nắm bắt tường tận chi tiết logic, sắp xếp ý tưởng mạch lạc.",
+        "advice": "Đưa ra đánh giá logic và giải pháp khi được yêu cầu, kết hợp giữa chi tiết thực tế và góc nhìn rộng lớn."
+    },
+    "18-58": {
+        "id": "18-58",
+        "name_vi": "Phán Quyết",
+        "name_en": "Judgment",
+        "gates": [18, 58],
+        "centers": ["Spleen", "Root"],
+        "centers_vi": ["Trung tâm Sinh Giác (Lách)", "Trung tâm Gốc"],
+        "group": "Khai Vấn",
+        "circuit": "Tập Thể",
+        "subcircuit": "Hiểu Biết",
+        "description": "Con mắt tinh tường nhìn thấy những gì chưa hoàn hảo cần chỉnh sửa để làm cho cuộc sống tốt đẹp hơn. Năng lượng cải tiến và phục hồi niềm vui.",
+        "advice": "Góp ý xây dựng trên tinh thần hỗ trợ và yêu thương, tránh chỉ trích khắt khe hoặc ép buộc người khác phải hoàn hảo."
+    },
+    "19-49": {
+        "id": "19-49",
+        "name_vi": "Sự Tổng Hợp",
+        "name_en": "Synthesis",
+        "gates": [19, 49],
+        "centers": ["Root", "Solar_Plexus"],
+        "centers_vi": ["Trung tâm Gốc", "Trung tâm Đám Rối Dương"],
+        "group": "Khai Vấn",
+        "circuit": "Bộ Lạc",
+        "subcircuit": "Bản Ngã",
+        "description": "Nhạy bén với nhu cầu cảm xúc của cộng đồng, thúc đẩy sự hòa hợp và sẵn sàng đấu tranh cách mạng để bảo vệ sự công bằng và phẩm giá.",
+        "advice": "Kiểm soát và cân bằng cảm xúc, không để mình bị choáng ngợp bởi năng lượng tập thể, giữ vững các giá trị cốt lõi."
+    },
+    "25-51": {
+        "id": "25-51",
+        "name_vi": "Sự Khởi Đầu",
+        "name_en": "Initiation",
+        "gates": [25, 51],
+        "centers": ["G_Center", "Heart"],
+        "centers_vi": ["Trung tâm Thượng Ngã (Ngực)", "Trung tâm Tâm Ngã (Tim)"],
+        "group": "Khai Vấn",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Tập Trung",
+        "description": "Chiến binh tinh thần quả cảm. Trải qua những cú sốc và biến cố bất ngờ để thức tỉnh tâm linh và nhận ra tình yêu thương vô điều kiện.",
+        "advice": "Xem mỗi thử thách là hạt giống của sự trưởng thành, biến nghịch cảnh thành sức mạnh và truyền cảm hứng dũng cảm cho người khác."
+    },
+    "26-44": {
+        "id": "26-44",
+        "name_vi": "Sự Dẫn Truyền",
+        "name_en": "Surrender",
+        "gates": [26, 44],
+        "centers": ["Heart", "Spleen"],
+        "centers_vi": ["Trung tâm Tâm Ngã (Tim)", "Trung tâm Sinh Giác (Lách)"],
+        "group": "Khai Vấn",
+        "circuit": "Bộ Lạc",
+        "subcircuit": "Bản Ngã",
+        "description": "Năng khiếu bán hàng, tiếp thị và nắm bắt xu hướng tương lai. Thuyết phục người khác bằng sự chính trực, trực giác sắc bén và kinh nghiệm thực tế.",
+        "advice": "Bán hàng và thuyết phục từ trái tim với sự trung thực cao nhất, không thao túng hay bóp méo sự thật vì lợi ích ngắn hạn."
+    },
+    "28-38": {
+        "id": "28-38",
+        "name_vi": "Sự Phấn Đấu",
+        "name_en": "Struggle",
+        "gates": [28, 38],
+        "centers": ["Spleen", "Root"],
+        "centers_vi": ["Trung tâm Sinh Giác (Lách)", "Trung tâm Gốc"],
+        "group": "Khai Vấn",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Trực Giác",
+        "description": "Chiến binh kiên cường đi tìm ý nghĩa cuộc sống. Sẵn sàng đương đầu với nghịch cảnh và đấu tranh ngoan cường cho những điều thực sự xứng đáng.",
+        "advice": "Chọn đúng 'cuộc chiến' đáng giá dựa trên Chiến lược và Quyền năng; biến gian nan thành bài học trí tuệ sâu sắc."
+    },
+    "32-54": {
+        "id": "32-54",
+        "name_vi": "Sự Chuyển Hóa",
+        "name_en": "Transformation",
+        "gates": [32, 54],
+        "centers": ["Spleen", "Root"],
+        "centers_vi": ["Trung tâm Sinh Giác (Lách)", "Trung tâm Gốc"],
+        "group": "Khai Vấn",
+        "circuit": "Bộ Lạc",
+        "subcircuit": "Bản Ngã",
+        "description": "Tham vọng vươn lên thành công kết hợp trực giác sinh tồn. Người thúc đẩy cải cách tổ chức, biến ước mơ lớn thành thành tựu vật chất bền vững.",
+        "advice": "Đặt kỳ vọng thực tế, dành thời gian nghỉ ngơi để không bị kiệt sức, kiên trì theo đuổi mục tiêu với sự thấu suốt thời điểm."
+    },
+    "37-40": {
+        "id": "37-40",
+        "name_vi": "Cộng Đồng",
+        "name_en": "Community",
+        "gates": [37, 40],
+        "centers": ["Solar_Plexus", "Heart"],
+        "centers_vi": ["Trung tâm Đám Rối Dương", "Trung tâm Tâm Ngã (Tim)"],
+        "group": "Khai Vấn",
+        "circuit": "Bộ Lạc",
+        "subcircuit": "Bản Ngã",
+        "description": "Chất keo gắn kết cộng đồng và gia đình. Tôn trọng cam kết, giao ước và sự trung thành, tạo nên không gian ấm áp nuôi dưỡng tình thân.",
+        "advice": "Cần thỏa thuận rõ ràng về quyền lợi và trách nhiệm, học cách đối mặt với bất đồng lành mạnh thay vì kìm nén để giữ hòa khí giả tạo."
+    },
+    "39-55": {
+        "id": "39-55",
+        "name_vi": "Cảm Xúc (Làn Sóng Cảm Xúc)",
+        "name_en": "Emoting",
+        "gates": [39, 55],
+        "centers": ["Root", "Solar_Plexus"],
+        "centers_vi": ["Trung tâm Gốc", "Trung tâm Đám Rối Dương"],
+        "group": "Khai Vấn",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Trực Giác",
+        "description": "Chiều sâu cảm xúc mênh mang, thăng trầm tâm trạng nghệ sĩ. Kích thích sự thức tỉnh tâm linh và nhận ra sự đủ đầy của vũ trụ.",
+        "advice": "Tôn trọng chu kỳ cảm xúc cá nhân, tìm đến âm nhạc, thơ ca hoặc sáng tạo khi tâm trạng lắng xuống, không ép mình phải vui vẻ liên tục."
+    },
+    "41-30": {
+        "id": "41-30",
+        "name_vi": "Sự Nhận Biết (Sự Công Nhận)",
+        "name_en": "Recognition",
+        "gates": [30, 41],
+        "centers": ["Solar_Plexus", "Root"],
+        "centers_vi": ["Trung tâm Đám Rối Dương", "Trung tâm Gốc"],
+        "group": "Khai Vấn",
+        "circuit": "Tập Thể",
+        "subcircuit": "Cảm Nhận",
+        "description": "Khao khát trải nghiệm cháy bỏng và trí tưởng tượng phong phú. Động lực mơ ước và dấn thân vào những cuộc phiêu lưu cảm xúc mới.",
+        "advice": "Làm mọi việc vì giá trị trải nghiệm thuần túy thay vì gắn chặt vào kỳ vọng kết quả, tránh để cảm xúc sụp đổ khi thực tế khác mộng tưởng."
+    },
+    "43-23": {
+        "id": "43-23",
+        "name_vi": "Cấu Trúc",
+        "name_en": "Structuring",
+        "gates": [23, 43],
+        "centers": ["Throat", "Ajna"],
+        "centers_vi": ["Trung tâm Tuệ Ngôn (Họng)", "Trung tâm Tuệ Nhãn (Trán)"],
+        "group": "Khai Vấn",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Trực Giác",
+        "description": "Người biến ý tưởng phức tạp thành cấu trúc đơn giản, dễ hiểu ('Lấy cái rối thành cái gọn'). Tư duy đột phá đi trước thời đại.",
+        "advice": "Chờ đợi lời mời và thời điểm thích hợp để chia sẻ góc nhìn độc đáo, tránh tỏ ra kỳ quặc hoặc áp đặt khi người khác chưa sẵn sàng nghe."
+    },
+    "61-24": {
+        "id": "61-24",
+        "name_vi": "Nhận Thức",
+        "name_en": "Awareness",
+        "gates": [24, 61],
+        "centers": ["Head", "Ajna"],
+        "centers_vi": ["Trung tâm Trí Huệ (Đầu)", "Trung tâm Tuệ Nhãn (Trán)"],
+        "group": "Khai Vấn",
+        "circuit": "Cá Nhân",
+        "subcircuit": "Trực Giác",
+        "description": "Khoảnh khắc 'Aha!' thức tỉnh. Biến cảm hứng trừu tượng từ vũ trụ thành nhận thức lý trí sâu sắc, giải mã những bí ẩn của cuộc đời.",
+        "advice": "Tập thiền và cho tâm trí nghỉ ngơi để đón nhận sự sáng tỏ tự nhiên, không nên tạo áp lực phải tìm ra câu trả lời bằng mọi giá."
+    },
+    "63-04": {
+        "id": "63-04",
+        "name_vi": "Hợp Lý (Kênh Logic)",
+        "name_en": "Logic",
+        "gates": [4, 63],
+        "centers": ["Head", "Ajna"],
+        "centers_vi": ["Trung tâm Trí Huệ (Đầu)", "Trung tâm Tuệ Nhãn (Trán)"],
+        "group": "Khai Vấn",
+        "circuit": "Tập Thể",
+        "subcircuit": "Hiểu Biết",
+        "description": "Tư duy logic Sherlock Holmes. Đặt câu hỏi hoài nghi lành mạnh để kiểm chứng tính xác thực, thiết lập giả thuyết và tìm ra giải pháp chặt chẽ.",
+        "advice": "Dùng năng lực logic cho các vấn đề khoa học, công việc tập thể; tránh áp dụng sự hoài nghi quá mức vào các mối quan hệ tình cảm cá nhân."
+    },
+    "64-47": {
+        "id": "64-47",
+        "name_vi": "Trừu Tượng",
+        "name_en": "Abstraction",
+        "gates": [47, 64],
+        "centers": ["Head", "Ajna"],
+        "centers_vi": ["Trung tâm Trí Huệ (Đầu)", "Trung tâm Tuệ Nhãn (Trán)"],
+        "group": "Khai Vấn",
+        "circuit": "Tập Thể",
+        "subcircuit": "Cảm Nhận",
+        "description": "Tư duy trừu tượng qua hình ảnh và trải nghiệm quá khứ. Nhìn lại lịch sử để đúc kết triết lý sống và đưa ra các khái niệm mới mẻ.",
+        "advice": "Dùng phương pháp hình dung (visualization) kết quả cuối cùng, kiên nhẫn chờ đợi các mảnh ghép tự động liên kết thành bức tranh trọn vẹn."
+    }
+}
+
+with open(os.path.join(DATA_DIR, "channels.json"), "w", encoding="utf-8") as f:
+    json.dump(channels_data, f, ensure_ascii=False, indent=2)
+
+print("Đã tạo channels.json thành công với 36 kênh!")

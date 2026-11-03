@@ -1,0 +1,22 @@
+# Big binary releases (avoid bloating Git history)
+*.apk
+*.zip
+
+# Flutter & Dart build caches
+mobile/.dart_tool/
+mobile/.flutter-plugins-dependencies
+mobile/.pub-cache/
+mobile/.pub/
+mobile/build/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE & OS files
+.idea/
+.vscode/
+*.iml
+Thumbs.db
+.DS_Store
+*.log

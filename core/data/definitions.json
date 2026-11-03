@@ -1,0 +1,42 @@
+{
+  "No_Definition": {
+    "id": "No_Definition",
+    "name_vi": "Không có phương thức liên kết",
+    "name_en": "No Definition",
+    "population_pct": "1.45%",
+    "description": "Không có trung tâm năng lượng nào được kết nối với nhau bằng kênh hoàn chỉnh. Đặc trưng của Nhóm Phản Chiếu. Khả năng thích ứng và linh hoạt cực kỳ cao.",
+    "advice": "Dành thời gian tĩnh lặng để làm sạch các năng lượng hấp thu từ môi trường. Tuân thủ chiến lược chu kỳ Mặt trăng."
+  },
+  "Single": {
+    "id": "Single",
+    "name_vi": "Phương thức liên kết Đơn",
+    "name_en": "Single Definition",
+    "population_pct": "41%",
+    "description": "Tất cả các trung tâm được xác định đều kết nối liên hoàn thành một mạng lưới thống nhất duy nhất. Năng lượng lưu thông thông suốt, xử lý thông tin nhanh, độc lập và tự chủ.",
+    "advice": "Tự tin trong quyết định, nhưng cần cởi mở lắng nghe người khác để tránh bảo thủ, cứng nhắc."
+  },
+  "Split": {
+    "id": "Split",
+    "name_vi": "Phương thức liên kết Đôi",
+    "name_en": "Split Definition",
+    "population_pct": "45%",
+    "description": "Các trung tâm xác định chia làm 2 cụm riêng biệt không có kênh nối liền. Thường cảm thấy sự giằng co như 'hai tiếng nói' bên trong mình.",
+    "advice": "Tự nhiên bị thu hút bởi người mang cổng/kênh bắc cầu giúp nối liền 2 cụm năng lượng. Cần kiên nhẫn hòa giải sự đối thoại bên trong."
+  },
+  "Triple_Split": {
+    "id": "Triple_Split",
+    "name_vi": "Phương thức liên kết Ba",
+    "name_en": "Triple Split Definition",
+    "population_pct": "11%",
+    "description": "Có 3 khu vực xác định tách biệt nhau. Khả năng nhìn cuộc sống từ nhiều góc độ phong phú, xuất sắc trong tích hợp các quan điểm đa dạng.",
+    "advice": "Cần ra ngoài tiếp xúc với nhiều môi trường và nhiều nhóm người khác nhau để dòng năng lượng được bắc cầu và lưu chuyển tự nhiên."
+  },
+  "Quadruple_Split": {
+    "id": "Quadruple_Split",
+    "name_vi": "Phương thức liên kết Bốn",
+    "name_en": "Quadruple Split Definition",
+    "population_pct": "0.57%",
+    "description": "Rất hiếm, có 4 khu vực xác định tách biệt (thường có 8 hoặc 9 trung tâm xác định). Như 4 tính cách riêng biệt cùng tồn tại trong một con người.",
+    "advice": "Cần thời gian và sự kiên nhẫn để các phần bên trong đồng thuận. Tránh vội vã đưa ra quyết định khi chưa có sự nhất quán nội tâm."
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "lines": {
+    "1": {
+      "name": "Hiếu kỳ | Cặn kẽ",
+      "name_en": "Investigator",
+      "metaphor": "Nền móng ngôi nhà",
+      "nature": "Cá nhân",
+      "desc": "Cần nghiên cứu sâu, xây dựng nền tảng vững chắc để vượt qua nỗi bất an."
+    },
+    "2": {
+      "name": "Tài năng | Thầm lặng",
+      "name_en": "Hermit",
+      "metaphor": "Cửa sổ tầng 1",
+      "nature": "Cá nhân",
+      "desc": "Thiên tài tự nhiên, cần thời gian bế quan tịnh dưỡng và chờ được gọi tên để tỏa sáng."
+    },
+    "3": {
+      "name": "Thực nghiệm | Thích nghi",
+      "name_en": "Martyr",
+      "metaphor": "Cầu thang ngôi nhà",
+      "nature": "Cá nhân",
+      "desc": "Học qua thử và sai, kiên cường vượt qua vấp ngã để rút ra bài học thực chứng quý báu."
+    },
+    "4": {
+      "name": "Quảng giao | Ổn định",
+      "name_en": "Opportunist",
+      "metaphor": "Ban công tầng 2",
+      "nature": "Tập thể",
+      "desc": "Xây dựng mạng lưới quan hệ sâu sắc, cơ hội đến từ bạn bè và người quen biết."
+    },
+    "5": {
+      "name": "Lãnh đạo | Tầm nhìn xa",
+      "name_en": "Heretic",
+      "metaphor": "Cửa sổ ẩn tầng 2",
+      "nature": "Tập thể",
+      "desc": "Người đưa ra giải pháp thực tiễn cứu nguy cho tập thể, được kỳ vọng như vị cứu tinh."
+    },
+    "6": {
+      "name": "Lý tưởng | Tấm gương sáng",
+      "name_en": "Role Model",
+      "metaphor": "Sân thượng / Nóc nhà",
+      "nature": "Tập thể",
+      "desc": "Hành trình 3 giai đoạn: Thử sai (0-30), Lên mái nhà chiêm nghiệm (30-50), Trở thành tấm gương mẫu mực (>50)."
+    }
+  },
+  "profiles": {
+    "1/3": {
+      "name": "1/3: Hiếu kỳ | Cặn kẽ / Thực nghiệm | Thích nghi",
+      "conscious": 1,
+      "unconscious": 3,
+      "geometry": "Góc phải (Chủ đề cá nhân)",
+      "summary": "Người khám phá chân lý qua sự kết hợp giữa nghiên cứu sâu sắc và thực chứng thử - sai. Bạn là chuyên gia với nền tảng kiến thức vững chắc và kinh nghiệm phong phú.",
+      "career": "Nghiên cứu, chuyên gia tư vấn kỹ thuật, phát triển sản phẩm, cố vấn chiến lược.",
+      "relationship": "Cần tìm hiểu kỹ đối tác để cảm thấy an toàn, học hỏi qua những thăng trầm để xây dựng niềm tin bền vững."
+    },
+    "1/4": {
+      "name": "1/4: Hiếu kỳ | Cặn kẽ / Quảng giao | Ổn định",
+      "conscious": 1,
+      "unconscious": 4,
+      "geometry": "Góc phải (Chủ đề cá nhân)",
+      "summary": "Người nắm vững nền tảng kiến thức và chia sẻ với mạng lưới thân thiết. Bạn xây dựng lòng tin qua sự uyên bác và mở rộng cơ hội từ bạn bè.",
+      "career": "Giảng dạy, đào tạo, quản lý mạng lưới quan hệ, chuyên gia trong cộng đồng.",
+      "relationship": "Muốn hiểu rõ nền tảng mối quan hệ trước khi cam kết; tình cảm thường phát triển từ nền tảng tình bạn thân thiết."
+    },
+    "2/4": {
+      "name": "2/4: Tài năng | Thầm lặng / Quảng giao | Ổn định",
+      "conscious": 2,
+      "unconscious": 4,
+      "geometry": "Góc phải (Chủ đề cá nhân)",
+      "summary": "Ẩn sĩ thân thiện. Vừa cần không gian riêng để trau dồi tài năng bẩm sinh, vừa là cầu nối tuyệt vời gắn kết mọi người khi được gọi ra khỏi vỏ ốc.",
+      "career": "Nghệ sĩ, lập trình viên, nhà nghiên cứu độc lập, chuyên viên quan hệ công chúng.",
+      "relationship": "Cần đối phương tôn trọng khoảng thời gian ở một mình, đồng thời rất chân thành và ấm áp khi kết nối."
+    },
+    "2/5": {
+      "name": "2/5: Tài năng | Thầm lặng / Lãnh đạo | Tầm nhìn xa",
+      "conscious": 2,
+      "unconscious": 5,
+      "geometry": "Góc phải (Chủ đề cá nhân)",
+      "summary": "Vị cứu tinh ẩn dật. Có tài năng tự nhiên để giải quyết vấn đề nan giải cho người khác khi được mời gọi đóng vai trò người dẫn dắt thực tế.",
+      "career": "Cố vấn khủng hoảng, lãnh đạo chiến lược, chuyên gia giải pháp công nghệ.",
+      "relationship": "Cần sự thấu hiểu từ bạn đời về nhu cầu ẩn dật, tránh bị áp đặt quá nhiều kỳ vọng viển vông từ đối phương."
+    },
+    "3/5": {
+      "name": "3/5: Thực nghiệm | Thích nghi / Lãnh đạo | Tầm nhìn xa",
+      "conscious": 3,
+      "unconscious": 5,
+      "geometry": "Góc phải (Chủ đề cá nhân)",
+      "summary": "Chiến binh kinh nghiệm đầy sức hút. Trải qua muôn vàn thử nghiệm và sai lầm để đúc kết thành kho trí tuệ thực tiễn giúp đỡ cả cộng đồng.",
+      "career": "Doanh nhân khởi nghiệp, giải quyết khủng hoảng, diễn giả truyền cảm hứng, nhà đổi mới.",
+      "relationship": "Cần người bạn đồng hành thấu hiểu bản chất thử-sai, không phán xét những giai đoạn biến động."
+    },
+    "3/6": {
+      "name": "3/6: Thực nghiệm | Thích nghi / Lý tưởng | Tấm gương sáng",
+      "conscious": 3,
+      "unconscious": 6,
+      "geometry": "Góc phải (Chủ đề cá nhân)",
+      "summary": "Cầu nối giữa trải nghiệm thực tế và trí tuệ hình mẫu. Trải qua nửa đầu đời đầy gian nan thử thách để trở thành ngọn hải đăng khôn ngoan ở giai đoạn sau.",
+      "career": "Tư vấn lãnh đạo, nhà văn, nhà phát triển con người, cố vấn cuộc sống.",
+      "relationship": "Nửa đầu đời có nhiều thăng trầm trong tình cảm; sau tuổi 30 và 50 đạt được sự thấu hiểu và gắn kết mẫu mực."
+    },
+    "4/6": {
+      "name": "4/6: Quảng giao | Ổn định / Lý tưởng | Tấm gương sáng",
+      "conscious": 4,
+      "unconscious": 6,
+      "geometry": "Góc kết nối (Chủ đề ổn định)",
+      "summary": "Người dẫn đường bằng tình bạn và gương mẫu. Sử dụng sức mạnh mạng lưới chân thành để truyền cảm hứng và trở thành hình mẫu đáng kính.",
+      "career": "Lãnh đạo cộng đồng, ngoại giao, quản trị nhân sự, cố vấn tổ chức.",
+      "relationship": "Coi trọng sự chân thành, minh bạch; tình yêu gắn liền với sự đồng điệu lý tưởng và phát triển chung."
+    },
+    "4/1": {
+      "name": "4/1: Quảng giao | Ổn định / Hiếu kỳ | Cặn kẽ",
+      "conscious": 4,
+      "unconscious": 1,
+      "geometry": "Góc kết nối (Cầu nối định mệnh)",
+      "summary": "Hồ sơ hiếm có con đường cố định vững như bàn thạch. Kết hợp giữa sự thân thiện quảng giao và nền tảng nghiên cứu cặn kẽ.",
+      "career": "Nhà giáo dục, nghiên cứu ứng dụng, xây dựng hệ thống quy chuẩn.",
+      "relationship": "Cần đối tác tôn trọng lộ trình sống kiên định của mình, rất trung thành và đáng tin cậy."
+    },
+    "5/1": {
+      "name": "5/1: Lãnh đạo | Tầm nhìn xa / Hiếu kỳ | Cặn kẽ",
+      "conscious": 5,
+      "unconscious": 1,
+      "geometry": "Góc trái (Chủ đề liên cá nhân)",
+      "summary": "Vị tướng thực thụ. Mang đến các giải pháp thực tế được xây dựng trên nền tảng nghiên cứu vững chắc. Người khác luôn tìm đến bạn để tìm lời giải.",
+      "career": "Lãnh đạo doanh nghiệp, kiến trúc sư trưởng, chuyên gia tư vấn chiến lược cấp cao.",
+      "relationship": "Cần bảo vệ ranh giới cá nhân, chỉ nhận trách nhiệm khi bản thân đã có đủ dữ liệu và nền tảng vững chắc."
+    },
+    "5/2": {
+      "name": "5/2: Lãnh đạo | Tầm nhìn xa / Tài năng | Thầm lặng",
+      "conscious": 5,
+      "unconscious": 2,
+      "geometry": "Góc trái (Chủ đề liên cá nhân)",
+      "summary": "Nhà lãnh đạo tự nhiên với tài năng tiềm ẩn. Được xã hội kêu gọi đảm nhận trọng trách dù thâm tâm luôn muốn dành thời gian riêng tư.",
+      "career": "Quản trị cấp cao, chuyên gia cố vấn độc lập, người dẫn dắt các phong trào cải cách.",
+      "relationship": "Cần sự tôn trọng không gian riêng từ bạn đời, cân bằng giữa cống hiến cho xã hội và chăm sóc nội tâm."
+    },
+    "6/2": {
+      "name": "6/2: Lý tưởng | Tấm gương sáng / Tài năng | Thầm lặng",
+      "conscious": 6,
+      "unconscious": 2,
+      "geometry": "Góc trái (Chủ đề liên cá nhân)",
+      "summary": "Tấm gương sáng mang vẻ đẹp thanh khiết của ẩn sĩ. Nhìn thấu bản chất cuộc đời, trải qua tôi luyện để trở thành người dẫn đường đầy uy tín và lòng từ bi.",
+      "career": "Cố vấn cấp cao, triết gia, nhà trị liệu tinh thần, lãnh đạo tinh thần.",
+      "relationship": "Tìm kiếm người bạn tâm giao có sự kết nối sâu sắc về tâm hồn, không thích sự hời hợt tầm thường."
+    },
+    "6/3": {
+      "name": "6/3: Lý tưởng | Tấm gương sáng / Thực nghiệm | Thích nghi",
+      "conscious": 6,
+      "unconscious": 3,
+      "geometry": "Góc trái (Chủ đề liên cá nhân)",
+      "summary": "Người không ngừng học hỏi và làm mới mình. Luôn giữ tinh thần dấn thân thử nghiệm để hoàn thiện lý tưởng sống cao đẹp.",
+      "career": "Nhà tiên phong đổi mới, nhà hoạt động xã hội, tác giả truyền cảm hứng.",
+      "relationship": "Coi mối quan hệ như một hành trình học hỏi liên tục; kiên nhẫn vượt qua thử thách để xây dựng tình yêu đích thực."
+    }
+  }
+}

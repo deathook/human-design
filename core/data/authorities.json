@@ -1,0 +1,97 @@
+{
+  "Emotional": {
+    "rank": 1,
+    "id": "Emotional",
+    "name_vi": "Quyền năng Cảm xúc",
+    "center": "Solar_Plexus",
+    "center_vi": "Trung tâm Đám Rối Dương",
+    "population_pct": "47% - 50%",
+    "affirmation": "Tôi tin rằng thời gian luôn ủng hộ tôi, ngay cả khi tôi cảm thấy thiếu kiên nhẫn.",
+    "description": "Nằm ở Trung tâm Đám Rối Dương xác định. Có độ ưu tiên cao nhất trong hệ thống quyền năng bên trong. Không có sự thật trong khoảnh khắc tức thời (No truth in the now). Bạn trải qua các làn sóng cảm xúc lên xuống và cần thời gian để cảm xúc lắng đọng về trạng thái trung lập trước khi đưa ra quyết định quan trọng.",
+    "wave_types": [
+      {
+        "name": "Sóng Nguồn (Kênh 59-6)",
+        "desc": "Nguồn của tất cả các cơn cảm xúc, có sức thâm nhập mạnh mẽ vào hào quang người khác."
+      },
+      {
+        "name": "Sóng Cá Nhân (Kênh 12-22, 39-55)",
+        "desc": "Liên quan đến tâm trạng, cảm xúc ủ rũ và chiều sâu nghệ thuật, âm thanh."
+      },
+      {
+        "name": "Sóng Bộ Lạc (Kênh 19-49, 37-40)",
+        "desc": "Cơn sóng tích tụ từ nhu cầu gắn kết, dễ bùng nổ theo kiểu giọt nước tràn ly."
+      },
+      {
+        "name": "Sóng Tập Thể (Kênh 41-30, 36-35)",
+        "desc": "Sóng tăng dần đều và sụp đổ do kỳ vọng không được đáp ứng. Hãy làm vì trải nghiệm, không vì kỳ vọng."
+      }
+    ],
+    "decision_rule": "Quyết định nhỏ cần ít nhất 5 phút; quyết định vừa cần ngủ qua đêm; quyết định lớn (sự nghiệp, quan hệ) cần ít nhất một tuần để đạt sự rõ ràng."
+  },
+  "Sacral": {
+    "rank": 2,
+    "id": "Sacral",
+    "name_vi": "Quyền năng Nguồn sinh lực",
+    "center": "Sacral",
+    "center_vi": "Trung tâm Đan Điền (Sinh Khí)",
+    "population_pct": "35%",
+    "affirmation": "Tôi tôn trọng sự kêu gọi thiêng liêng sẽ mang đến những quyết định phù hợp với điều tốt đẹp nhất dành cho tôi.",
+    "description": "Xuất hiện ở Nhóm Vận Hành hoặc Khởi Xướng Vận Hành khi Đám Rối Dương mở. Trực giác nói qua cảm giác ở bụng và phát ra âm thanh tự nhiên: 'Ừ hứ' (có) hoặc 'Ừ ừ' (không). Phản ứng xảy ra tức thì trong khoảnh khắc khi nhận được câu hỏi có/không.",
+    "decision_rule": "Luyện tập thông qua các câu hỏi có/không hoặc câu hỏi nhị phân ('Bạn có muốn đi ăn không?'). Nếu có sự do dự, câu trả lời là KHÔNG."
+  },
+  "Splenic": {
+    "rank": 3,
+    "id": "Splenic",
+    "name_vi": "Quyền năng Nhận thức (Trực giác Lách)",
+    "center": "Spleen",
+    "center_vi": "Trung tâm Sinh Giác (Lách)",
+    "population_pct": "11%",
+    "affirmation": "Trực giác không bao giờ lừa dối tôi, ngay cả khi nó im lặng.",
+    "description": "Bắt nguồn từ Trung tâm Lách khi cả Đám Rối Dương và Đan Điền đều mở (ở nhóm Khởi Xướng hoặc Khai Vấn). Đây là trực giác sinh tồn nguyên thủy, cảnh báo qua cảm giác bồn chồn, ớn lạnh, ấm áp hoặc tiếng thì thầm trong khoảnh khắc. Tín hiệu chỉ xuất hiện một lần duy nhất rồi biến mất.",
+    "decision_rule": "Hành động ngay theo trực giác tức thì, không để tâm trí phân tích logic can thiệp hay biến thành nỗi sợ hãi tương lai."
+  },
+  "Ego": {
+    "rank": 4,
+    "id": "Ego",
+    "name_vi": "Quyền năng Cái tôi bản ngã",
+    "center": "Heart",
+    "center_vi": "Trung tâm Tâm Ngã (Tim)",
+    "population_pct": "1%",
+    "affirmation": "Tôi tin vào chân ngã của mình. Tự tin đưa ra quyết định và tin rằng bản thân hòa nhịp với cuộc sống của mình.",
+    "description": "Quyền năng rất hiếm, chia làm 2 dạng: Cái tôi bản ngã thể hiện (Tim nối Họng - ở nhóm Khởi Xướng) và Cái tôi bản ngã phản chiếu (Tim nối Ngực - ở nhóm Khai Vấn). Quyết định đến từ ý chí và mong muốn thực sự của trái tim.",
+    "decision_rule": "Tự hỏi bản thân: 'Tôi thực sự muốn gì? Điều này có lợi gì cho tôi? Trái tim tôi có thực sự cam kết và sẵn sàng dốc sức không?'"
+  },
+  "Self_Projected": {
+    "rank": 5,
+    "id": "Self_Projected",
+    "name_vi": "Quyền năng Danh tính (Tự phóng chiếu)",
+    "center": "G_Center",
+    "center_vi": "Trung tâm Thượng Ngã (Ngực)",
+    "population_pct": "2.8%",
+    "affirmation": "Tôi tin tưởng vào việc sử dụng tiếng nói của mình để bày tỏ những nhu cầu của bản thân.",
+    "description": "Ở nhóm Khai Vấn khi Trung tâm Thượng Ngã kết nối với Tuệ Ngôn (Họng) và không có các trung tâm động cơ bên dưới xác định. Quyết định đúng đắn hé lộ khi bạn nói chuyện tự nhiên trong một không gian an toàn và lắng nghe chính giọng nói của mình.",
+    "decision_rule": "Tìm một người lắng nghe trung lập, hoặc tự ghi âm/nói ra thành tiếng để lắng nghe âm điệu chân thật toát ra từ chính mình."
+  },
+  "Environmental": {
+    "rank": 6,
+    "id": "Environmental",
+    "name_vi": "Quyền năng Môi trường | Tinh thần",
+    "center": "Ajna_Crown",
+    "center_vi": "Trung tâm Trí Huệ / Tuệ Nhãn",
+    "population_pct": "3.6%",
+    "affirmation": "Tôi tin tưởng vào quan điểm và trí tuệ của mình. Tôi sử dụng ý kiến của người khác để tìm kiếm sự rõ ràng, để có thể tự tin đưa ra quyết định phù hợp với chân ngã của tôi.",
+    "description": "Thuộc nhóm Khai Vấn tinh thần (Mental Projector), chỉ có Đầu + Trán hoặc Đầu + Trán + Họng xác định, không có trung tâm nào bên dưới Họng. Môi trường xung quanh quyết định sự sáng suốt của bạn.",
+    "decision_rule": "Quan sát cảm giác của cơ thể với môi trường: Nếu môi trường cảm thấy đúng, quyết định sẽ đúng. Dùng người khác như một bảng phản hồi (sounding board) chứ không xin lời khuyên."
+  },
+  "Lunar": {
+    "rank": 7,
+    "id": "Lunar",
+    "name_vi": "Quyền năng Chu kỳ Mặt trăng",
+    "center": "None",
+    "center_vi": "Không có trung tâm xác định",
+    "population_pct": "1.4%",
+    "affirmation": "Kiên nhẫn là người bạn đồng hành thân thiết. Càng tin tưởng sâu sắc, tôi càng cảm thấy gắn kết hơn.",
+    "description": "Dành riêng cho Nhóm Phản Chiếu (Reflector) khi toàn bộ 9 trung tâm đều mở. Trong 28 ngày chu kỳ Mặt trăng, Mặt trăng sẽ đi qua lần lượt tất cả 64 cổng, cho phép bạn trải nghiệm đầy đủ các góc nhìn và quyền năng trước khi quyết định.",
+    "decision_rule": "Chờ đợi trọn vẹn 1 chu kỳ Mặt trăng (~28 ngày) đối với các quyết định lớn. Nói chuyện và quan sát cảm xúc qua từng pha của chu kỳ."
+  }
+}

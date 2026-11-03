@@ -1,0 +1,201 @@
+{
+  "Head": {
+    "id": "Head",
+    "name_vi": "Trung tâm Trí Huệ",
+    "name_en": "Crown Center",
+    "location": "Đỉnh đầu",
+    "function_type": "Áp lực (Pressure)",
+    "biological": "Tuyến tùng (Pineal gland)",
+    "defined_pct": "30%",
+    "undefined_pct": "70%",
+    "gates": [
+      64,
+      61,
+      63
+    ],
+    "defined_desc": "Dòng cảm hứng ổn định, áp lực tư duy bền bỉ từ bên trong, tò mò sâu sắc và tập trung giải quyết các câu hỏi lớn.",
+    "undefined_desc": "Linh hoạt tinh thần, tiếp nhận câu hỏi và cảm hứng từ môi trường, có thể hiểu nhiều góc nhìn nhưng dễ bị áp lực giải quyết vấn đề của người khác.",
+    "key_question": "Tôi có đang cố gắng trả lời những câu hỏi không phải của mình không?"
+  },
+  "Ajna": {
+    "id": "Ajna",
+    "name_vi": "Trung tâm Tuệ Nhãn",
+    "name_en": "Ajna Center",
+    "location": "Trán",
+    "function_type": "Nhận thức tinh thần (Awareness)",
+    "biological": "Tuyến yên (Pituitary gland)",
+    "defined_pct": "47%",
+    "undefined_pct": "53%",
+    "gates": [
+      47,
+      24,
+      4,
+      17,
+      43,
+      11
+    ],
+    "defined_desc": "Cách xử lý và cấu trúc thông tin cố định, đáng tin cậy; tư duy nhất quán, kiên định với quan điểm nhưng có thể cứng nhắc.",
+    "undefined_desc": "Tư duy mở, dễ dàng thấu hiểu và xem xét vấn đề từ nhiều lăng kính, không cần phải cố tỏ ra chắc chắn về mọi thứ.",
+    "key_question": "Tôi có đang cố gắng thuyết phục mọi người rằng tôi luôn chắc chắn không?"
+  },
+  "Throat": {
+    "id": "Throat",
+    "name_vi": "Trung tâm Tuệ Ngôn",
+    "name_en": "Throat Center",
+    "location": "Cổ họng",
+    "function_type": "Biểu hiện & Hiện thực hóa (Manifestation)",
+    "biological": "Tuyến giáp trạng và cận giáp",
+    "defined_pct": "72%",
+    "undefined_pct": "28%",
+    "gates": [
+      62,
+      23,
+      56,
+      35,
+      12,
+      45,
+      33,
+      8,
+      31,
+      20,
+      16
+    ],
+    "defined_desc": "Giọng nói và phong cách biểu đạt nhất quán, có sức mạnh biến ý tưởng thành hành động thực tế.",
+    "undefined_desc": "Giao tiếp linh hoạt tùy đối tượng, cần học cách thoải mái với sự im lặng và chỉ nói khi được mời để lời nói có trọng lượng.",
+    "key_question": "Tôi có đang cố gắng thu hút sự chú ý bằng cách nói quá nhiều không?"
+  },
+  "G_Center": {
+    "id": "G_Center",
+    "name_vi": "Trung tâm Thượng Ngã",
+    "name_en": "G-Center",
+    "location": "Ngực giữa",
+    "function_type": "Bản sắc, Định hướng & Tình yêu (Identity & Direction)",
+    "biological": "Gan và tuần hoàn máu",
+    "defined_pct": "57%",
+    "undefined_pct": "43%",
+    "gates": [
+      7,
+      1,
+      13,
+      25,
+      46,
+      2,
+      15,
+      10
+    ],
+    "defined_desc": "Bản sắc và hướng đi cuộc đời ổn định, rõ ràng về con người mình và tình yêu bản thân, như một chiếc la bàn vững chãi.",
+    "undefined_desc": "Bản sắc linh hoạt, đổi thay theo môi trường và người đồng hành; phát triển qua việc trải nghiệm nhiều con đường khác nhau.",
+    "key_question": "Tôi có đang ám ảnh tìm kiếm xem tôi là ai và tôi đang đi về đâu không?"
+  },
+  "Heart": {
+    "id": "Heart",
+    "name_vi": "Trung tâm Tâm Ngã (Ý Chí)",
+    "name_en": "Heart / Ego Center",
+    "location": "Bên phải Thượng Ngã",
+    "function_type": "Động cơ Ý chí & Giá trị bản thân (Motor)",
+    "biological": "Tim, tuyến ức, dạ dày, túi mật",
+    "defined_pct": "37%",
+    "undefined_pct": "63%",
+    "gates": [
+      21,
+      51,
+      26,
+      40
+    ],
+    "defined_desc": "Ý chí mạnh mẽ, quyết tâm cao, khả năng thực hiện cam kết và quản lý tài nguyên vật chất tuyệt vời.",
+    "undefined_desc": "Giá trị bản thân là vốn có không cần chứng minh; không nên đưa ra những lời hứa ràng buộc ý chí hay cố làm hài lòng người khác.",
+    "key_question": "Tôi có đang cảm thấy mình phải chứng minh giá trị bản thân với ai đó không?"
+  },
+  "Solar_Plexus": {
+    "id": "Solar_Plexus",
+    "name_vi": "Trung tâm Thái Dương",
+    "name_en": "Solar Plexus Center",
+    "location": "Bên phải Đan Điền",
+    "function_type": "Nhận thức & Động cơ Cảm xúc (Awareness & Motor)",
+    "biological": "Thận, tuyến tiền liệt, hệ thần kinh",
+    "defined_pct": "53%",
+    "undefined_pct": "47%",
+    "gates": [
+      36,
+      22,
+      37,
+      6,
+      49,
+      55,
+      30
+    ],
+    "defined_desc": "Phát ra các làn sóng cảm xúc chu kỳ tự nhiên; cần chờ cảm xúc lắng đọng để đạt sự sáng suốt trước khi quyết định.",
+    "undefined_desc": "Hấp thụ và khuếch đại cảm xúc từ người khác; là tấm gương thấu cảm nhưng cần thiết lập ranh giới cảm xúc lành mạnh.",
+    "key_question": "Tôi có đang né tránh xung đột và sự thật vì sợ làm người khác buồn không?"
+  },
+  "Sacral": {
+    "id": "Sacral",
+    "name_vi": "Trung tâm Sinh Khí (Đan Điền)",
+    "name_en": "Sacral Center",
+    "location": "Bụng dưới",
+    "function_type": "Động cơ Lực sống (Motor)",
+    "biological": "Cơ quan sinh sản",
+    "defined_pct": "67%",
+    "undefined_pct": "33%",
+    "gates": [
+      5,
+      14,
+      29,
+      34,
+      27,
+      42,
+      3,
+      9,
+      59
+    ],
+    "defined_desc": "Nguồn pin năng lượng bền bỉ, làm việc hăng say với điều mình yêu thích, phản hồi qua âm thanh Đan Điền.",
+    "undefined_desc": "Không có nguồn năng lượng làm việc liên tục; cần biết điểm dừng để nghỉ ngơi và nạp lại năng lượng, tránh làm việc quá sức.",
+    "key_question": "Tôi có biết khi nào là đủ để dừng lại và nghỉ ngơi không?"
+  },
+  "Spleen": {
+    "id": "Spleen",
+    "name_vi": "Trung tâm Sinh Giác (Lách)",
+    "name_en": "Spleen Center",
+    "location": "Bên trái Đan Điền",
+    "function_type": "Nhận thức Trực giác Thể chất (Awareness)",
+    "biological": "Hệ miễn dịch, hệ bạch huyết và lách",
+    "defined_pct": "55%",
+    "undefined_pct": "45%",
+    "gates": [
+      48,
+      57,
+      44,
+      50,
+      32,
+      28,
+      18
+    ],
+    "defined_desc": "Trực giác sinh tồn nhạy bén trong khoảnh khắc hiện tại, hệ miễn dịch tốt, cảm nhận nhanh điều gì an toàn hay nguy hiểm.",
+    "undefined_desc": "Nhạy cảm với sức khỏe và năng lượng người khác; dễ bám víu vào những mối quan hệ độc hại chỉ vì cảm giác an toàn quen thuộc.",
+    "key_question": "Tôi có đang níu giữ điều gì không còn tốt đẹp cho mình chỉ vì sợ hãi không?"
+  },
+  "Root": {
+    "id": "Root",
+    "name_vi": "Trung tâm Gốc",
+    "name_en": "Root Center",
+    "location": "Đáy cơ thể",
+    "function_type": "Áp lực & Động cơ Sinh tồn (Pressure & Motor)",
+    "biological": "Tuyến thượng thận, adrenaline",
+    "defined_pct": "60%",
+    "undefined_pct": "40%",
+    "gates": [
+      53,
+      60,
+      52,
+      19,
+      39,
+      41,
+      54,
+      38,
+      58
+    ],
+    "defined_desc": "Chịu đựng áp lực và căng thẳng tốt; có khả năng biến áp lực thành động lực hành động ổn định và nhất quán.",
+    "undefined_desc": "Dễ bị áp lực và cảm giác vội vã từ người khác cuốn đi; cần học cách thư giãn và không để sự gấp gáp thúc ép hành động sai lầm.",
+    "key_question": "Tôi có đang vội vã làm mọi thứ chỉ để giải phóng áp lực không?"
+  }
+}

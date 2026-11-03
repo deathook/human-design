@@ -1,0 +1,165 @@
+{
+  "Manifestor": {
+    "id": "Manifestor",
+    "name_vi": "Nhóm Khởi Xướng",
+    "description": "Là nhóm năng lượng hiếm và đặc biệt, chiếm tỷ lệ nhỏ trong dân số nhưng mang sức ảnh hưởng lớn đến dòng chảy phát triển của thế giới. Họ là những người không chờ đợi sự thay đổi, mà chính họ là điểm khởi đầu của sự thay đổi đó.",
+    "centers_rule": "Trung tâm Sinh Lực không xác định, có ít nhất một trong các Trung tâm Thái Dương, Thượng Ngã hoặc Gốc xác định và kết nối với Trung tâm Tuệ Ngôn.",
+    "positive_state": "Bình an",
+    "negative_state": "Phẫn nộ / Giận dữ",
+    "population_pct": "8 - 9%",
+    "animal_symbol": "Voi - chúa tể thực sự của rừng xanh, lãnh đạo bằng phong cách bình an, tĩnh tại.",
+    "affirmation": "Tôi tôn trọng nhu cầu độc lập của mình và truyền đạt những ý định của tôi với tình yêu và sự rõ ràng. Tôi trân trọng sự kết nối và sự thân mật đến từ việc hiểu và tôn trọng bản chất riêng biệt của nhau.",
+    "strengths": [
+      "Năng động, có chí hướng",
+      "Mạnh mẽ, có tầm ảnh hưởng",
+      "Thành công, hiệu quả",
+      "Ngẫu hứng",
+      "Bí ẩn"
+    ],
+    "weaknesses": [
+      "Tức giận, cáu kỉnh",
+      "Tự mãn",
+      "Không thích làm việc nhóm",
+      "Thiếu kiên nhẫn",
+      "Có những bí mật khó công khai"
+    ],
+    "strategy": {
+      "name": "Thông báo",
+      "description": "Truyền đạt ý định của mình đến những người sẽ bị ảnh hưởng trước khi hành động để giảm thiểu sự kháng cự và xung đột."
+    },
+    "signature": "Bình an",
+    "not_self": "Giận dữ",
+    "career_advice": "Phù hợp với vai trò tiên phong, lãnh đạo mở đường, khởi xướng các dự án, không bị bó buộc vào quy trình kiểm soát vi mô hay báo cáo chi li hàng ngày.",
+    "relationship_advice": "Độc lập, yêu dứt khoát. Cần khoảng không gian riêng tư. Thông báo trước cho đối phương để giữ hòa khí thay vì xin phép."
+  },
+  "Generator": {
+    "id": "Generator",
+    "name_vi": "Nhóm Vận Hành",
+    "description": "Là nhóm năng lượng đông nhất và là trái tim giữ nhịp sống, năng lượng bền bỉ nuôi dưỡng cả thế giới. Họ được sinh ra để đáp ứng với cuộc đời thay vì tự lao đi tìm kiếm.",
+    "centers_rule": "Trung tâm Sinh Lực xác định, nhưng không có Trung tâm Tâm Ngã, Thái Dương hoặc Gốc kết nối trực tiếp với Tuệ Ngôn.",
+    "positive_state": "Thỏa mãn",
+    "negative_state": "Bất mãn / Thất vọng",
+    "population_pct": "34 - 35%",
+    "animal_symbol": "Linh Dương - những linh hồn vui vẻ và xinh đẹp làm người khác bị cuốn hút bởi cách họ đùa nghịch và tận hưởng cuộc sống.",
+    "affirmation": "Tôi tin tưởng phản ứng bên trong của mình sẽ dẫn dắt tôi đến sự hài lòng thực sự. Năng lượng của tôi là một năng khiếu mà tôi tôn trọng bằng cách tham gia vào những gì mang lại cho tôi niềm vui và sự thỏa mãn.",
+    "strengths": [
+      "Tràn đầy năng lượng",
+      "Bậc thầy trong ngành nghề của họ",
+      "Có nguồn năng lượng bền bỉ",
+      "Ý thức nhạy bén"
+    ],
+    "weaknesses": [
+      "Thường bất mãn",
+      "Chóng từ bỏ",
+      "Không thể hoàn thành việc mình mong muốn",
+      "Cảm thấy bế tắc"
+    ],
+    "strategy": {
+      "name": "Chờ đợi phản hồi",
+      "description": "Chờ đợi các tín hiệu từ cuộc sống để Trung tâm Đan Điền phát ra phản ứng 'Uh-huh' (có) hoặc 'Uh-uh' (không) trước khi hành động."
+    },
+    "signature": "Thỏa mãn",
+    "not_self": "Bất mãn / Thất vọng",
+    "career_advice": "Có thể làm giỏi mọi thứ khi được làm việc mình yêu thích. Nguồn năng lượng bền bỉ giúp họ làm việc miệt mài không mệt mỏi.",
+    "relationship_advice": "Ấm áp, chân thành, cuốn hút. Cần được hỏi những câu hỏi mở ('Em có thích điều này không?') để kích hoạt phản hồi tự nhiên."
+  },
+  "Manifesting_Generator": {
+    "id": "Manifesting_Generator",
+    "name_vi": "Nhóm Khởi Xướng - Vận Hành",
+    "description": "Những linh hồn đa nhiệm, nhanh nhạy và bứt phá theo cách không ai đoán được. Họ kết hợp sức bền bỉ của Vận Hành và xung lực đột phá của Khởi Xướng: vừa mở đường vừa chạy thật nhanh trên con đường đó.",
+    "centers_rule": "Trung tâm Sinh Lực xác định, kết nối với Trung tâm Tuệ Ngôn xác định (trực tiếp hoặc qua Thượng Ngã/Tâm Ngã/Thái Dương).",
+    "positive_state": "Thỏa mãn và Bình an",
+    "negative_state": "Thất vọng và Giận dữ",
+    "population_pct": "35%",
+    "animal_symbol": "Ngựa vằn - những cá thể tự do và không thể lường trước luôn sống và thực hiện theo chủ nghĩa cá nhân.",
+    "affirmation": "Tôi năng động, hiệu quả và đa tài. Năng lượng của tôi là năng khiếu thúc đẩy tôi hướng tới mục tiêu của mình với tốc độ và sự chính xác. Tôi đón nhận sức mạnh của mình để khởi xướng và phản hồi, biết rằng con đường của tôi là một hành trình khám phá thú vị và phát triển nhanh chóng.",
+    "strengths": [
+      "Tràn đầy năng lượng",
+      "Có thể cùng lúc làm nhiều việc",
+      "Năng khiếu tìm ra cách làm hiệu quả",
+      "Ý thức nhạy bén",
+      "Nguồn năng lượng bền bỉ"
+    ],
+    "weaknesses": [
+      "Tức giận, bất mãn",
+      "Bỏ qua những bước quan trọng",
+      "Cố để hoàn thành mọi thứ",
+      "Ghét việc chờ đợi",
+      "Không hoàn thành việc đã bắt đầu"
+    ],
+    "strategy": {
+      "name": "Phản hồi, hành động, thông báo, khởi tạo",
+      "description": "Đầu tiên chờ tín hiệu để phản hồi từ Đan Điền, sau đó hành động thử nghiệm, rồi thông báo cho người xung quanh trước khi hoàn tất chuyển mình."
+    },
+    "signature": "Thỏa mãn & Bình an",
+    "not_self": "Thất vọng & Giận dữ",
+    "career_advice": "Người đa sự nghiệp, đa kỹ năng. Phù hợp kinh doanh tự do, sáng tạo nội dung, quản lý dự án linh hoạt, môi trường nhiều thử thách liên tục đổi mới.",
+    "relationship_advice": "Cuốn hút nhưng cần sự tự do tuyệt đối. Người bạn đồng hành cần ủng hộ tinh thần thử-sai-sửa của họ thay vì ép theo lộ trình cứng nhắc."
+  },
+  "Projector": {
+    "id": "Projector",
+    "name_vi": "Nhóm Khai Vấn",
+    "description": "Người dẫn đường thầm lặng sinh ra để nhìn thấu và định hướng. Không có nguồn sinh lực dồi dào để làm việc cật lực, nhưng họ là đôi mắt và bộ não chiến lược giúp năng lượng của thế giới đi đúng hướng.",
+    "centers_rule": "Trung tâm Sinh Lực không xác định và không có động cơ nào (Tâm Ngã, Thái Dương, Gốc) kết nối trực tiếp với Tuệ Ngôn.",
+    "positive_state": "Thành công",
+    "negative_state": "Cay đắng",
+    "population_pct": "21 - 22%",
+    "animal_symbol": "Chim - có thể đem đến cho người khác góc nhìn độc đáo và bao quát trên ngọn cây cao.",
+    "affirmation": "Tôi thông thái, thấu suốt và được công nhận vì sự hướng dẫn của mình. Khả năng thấu hiểu sâu sắc về người khác và hệ thống mọi vấn đề lại với nhau là một năng khiếu mà tôi sẽ chia sẻ với sự rõ ràng và tình yêu thương khi được mời. Tôi chờ đợi sự công nhận và lời mời, biết rằng những đóng góp của tôi là quý giá và mang tính chất biến đổi.",
+    "strengths": [
+      "Quản lý và định hướng người khác",
+      "Am hiểu sâu sắc",
+      "Trực giác nhạy bén",
+      "Thu hút",
+      "Tập trung năng lượng để hoàn thành những việc lớn"
+    ],
+    "weaknesses": [
+      "Có thể bị người khác đánh giá là lười biếng",
+      "Dễ bị kiệt sức",
+      "Quá nhạy cảm",
+      "Tự ti",
+      "Cảm thấy cay đắng, không cam tâm khi bị ngó lơ"
+    ],
+    "strategy": {
+      "name": "Chờ đợi lời mời và sự công nhận",
+      "description": "Chờ đợi được công nhận năng lực và nhận lời mời đích thực trước khi đưa ra lời khuyên hay can thiệp vào cuộc sống của người khác."
+    },
+    "signature": "Thành công",
+    "not_self": "Cay đắng",
+    "career_advice": "Người thiết kế hệ thống, tư vấn chiến lược, cố vấn, quản lý, huấn luyện viên, chuyên gia tâm lý hoặc định hướng nhân sự.",
+    "relationship_advice": "Sâu sắc, tinh tế, nhìn thấu tâm can đối phương. Cần một mối quan hệ mà tiếng nói của mình được lắng nghe và tôn trọng."
+  },
+  "Reflector": {
+    "id": "Reflector",
+    "name_vi": "Nhóm Phản Chiếu",
+    "description": "Tấm gương sống động nhắc nhở thế giới chậm lại và lắng nghe. Là dạng năng lượng hiếm nhất, hoàn toàn mở để phản ánh sức khỏe và trạng thái của cả cộng đồng.",
+    "centers_rule": "Tất cả 9 Trung tâm đều không xác định (màu trắng).",
+    "positive_state": "Bất ngờ / Hài hòa",
+    "negative_state": "Thất vọng",
+    "population_pct": "< 1%",
+    "animal_symbol": "Chim Cú - biểu tượng của sự tự nhận thức và hiểu biết ý nghĩa sâu sắc của cuộc sống.",
+    "affirmation": "Tôi là tấm gương phản chiếu thế giới xung quanh, phản ánh vẻ đẹp và sự phức tạp của cuộc sống. Sự nhạy cảm là sức mạnh của tôi, cho phép tôi hiểu và đồng cảm sâu sắc với người khác. Tôi dành thời gian để đưa ra quyết định, tôn trọng chu kỳ của mặt trăng và quá trình phân biệt độc đáo của riêng tôi.",
+    "strengths": [
+      "Hoạt ngôn",
+      "Đam mê",
+      "Độc đáo",
+      "Đề xuất cho hòa bình và thịnh vượng",
+      "Phản chiếu sự lành mạnh trong cộng đồng"
+    ],
+    "weaknesses": [
+      "Nhạy cảm quá mức",
+      "Cảm thấy thất vọng",
+      "Cần sự nhất quán",
+      "Khó khăn để cảm thấy bình tâm",
+      "Bám chấp"
+    ],
+    "strategy": {
+      "name": "Quan sát và chờ đợi chu kỳ mặt trăng",
+      "description": "Chờ đợi qua một chu kỳ mặt trăng 28 ngày để trải nghiệm các góc nhìn năng lượng khác nhau trước khi đưa ra quyết định trọng đại."
+    },
+    "signature": "Bất ngờ / Hài hòa",
+    "not_self": "Thất vọng",
+    "career_advice": "Chọn môi trường quan trọng hơn chọn nghề. Phù hợp các công việc có nhịp độ linh hoạt, cộng đồng tích cực: nghệ thuật, trị liệu, giáo dục, thẩm định.",
+    "relationship_advice": "Cần sự tôn trọng nhịp riêng, không ép uổng. Mối quan hệ nhẹ nhàng, không chiếm dụng năng lượng và cho phép họ được là chiếc gương trong trẻo."
+  }
+}
