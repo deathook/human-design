@@ -174,10 +174,13 @@ class _ProfilesScreenState extends State<ProfilesScreen> {
               ),
             ],
           ),
-          body: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          body: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 880),
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 // DANH SÁCH LÁ SỐ ĐÃ LƯU TRONG BỘ NHỚ LOCAL CỦA MÁY
                 Row(
@@ -429,8 +432,8 @@ class _ProfilesScreenState extends State<ProfilesScreen> {
                       const SizedBox(height: 4),
                       Text(
                         isEn
-                            ? 'Based on "Human Design For Beginners"\nCompiled by TH Group - Tinh Hoa Bản Mệnh • Ngô Xuân Hội'
-                            : 'Dựa trên cuốn sách "Human Design Cho Người Mới Bắt Đầu"\nBiên soạn: TH Group - Tinh Hoa Bản Mệnh • Ngô Xuân Hội',
+                            ? 'Based on "Human Design For Beginners"\nCompiled by TH Group - Tinh Hoa Bản Mệnh'
+                            : 'Dựa trên cuốn sách "Human Design Cho Người Mới Bắt Đầu"\nBiên soạn: TH Group - Tinh Hoa Bản Mệnh',
                         textAlign: TextAlign.center,
                         style: const TextStyle(color: Color(0xFF4B5563), fontSize: 10, height: 1.4),
                       ),
@@ -441,7 +444,9 @@ class _ProfilesScreenState extends State<ProfilesScreen> {
               ],
             ),
           ),
-        );
+        ),
+      ),
+    );
       },
     );
   }

@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "web_build",
   "cleanUrls": true,
   "rewrites": [
     {

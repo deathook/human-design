@@ -87,9 +87,12 @@ class _BodygraphScreenState extends State<BodygraphScreen> {
               ),
             ],
           ),
-          body: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          body: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 880),
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 // 1. THÔNG TIN TIÊU ĐỀ BẢN MỆNH (Phong cách tối giản thanh lịch như mẫu)
                 Padding(
@@ -427,8 +430,10 @@ class _BodygraphScreenState extends State<BodygraphScreen> {
               ],
             ),
           ),
-        );
-      },
+        ),
+      ),
+    );
+  }
     );
   }
 

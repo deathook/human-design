@@ -83,46 +83,51 @@ class _VipReadingScreenState extends State<VipReadingScreen> {
               ),
             ],
           ),
-          body: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Banner Trạng thái VIP
-                if (!isVipUnlocked)
-                  _buildVipPromoCard(isEn)
-                else
-                  _buildVipActiveBadge(isEn),
-                const SizedBox(height: 16),
+          body: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 880),
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    // Banner Trạng thái VIP
+                    if (!isVipUnlocked)
+                      _buildVipPromoCard(isEn)
+                    else
+                      _buildVipActiveBadge(isEn),
+                    const SizedBox(height: 16),
 
-                // TỔNG QUAN BẢN MỆNH (ĐÃ SỬA LỖI TRÀN CHỮ HOÀN TOÀN)
-                _buildSectionHeader(
-                  isEn ? 'CHART SUMMARY' : 'TỔNG QUAN BẢN MỆNH',
-                  Icons.auto_awesome,
+                    // TỔNG QUAN BẢN MỆNH (ĐÃ SỬA LỖI TRÀN CHỮ HOÀN TOÀN)
+                    _buildSectionHeader(
+                      isEn ? 'CHART SUMMARY' : 'TỔNG QUAN BẢN MỆNH',
+                      Icons.auto_awesome,
+                    ),
+                    _buildCleanOverviewCard(chart, isEn),
+                    const SizedBox(height: 20),
+
+                    // DANH SÁCH 10 CHƯƠNG CHUYÊN SÂU
+                    _buildSectionHeader(
+                      isEn ? '10-CHAPTER COMPREHENSIVE REPORT' : '10 CHƯƠNG LUẬN GIẢI CHUYÊN SÂU (CHUẨN SÁCH & IHDS)',
+                      Icons.menu_book,
+                    ),
+                    const SizedBox(height: 8),
+
+                    _buildExpandableChapter(ch1, '01', Icons.explore, false),
+                    _buildExpandableChapter(ch2, '02', Icons.bolt, !isVipUnlocked),
+                    _buildExpandableChapter(ch3, '03', Icons.compass_calibration, !isVipUnlocked),
+                    _buildExpandableChapter(ch4, '04', Icons.polyline, !isVipUnlocked),
+                    _buildExpandableChapter(ch5, '05', Icons.brightness_7, !isVipUnlocked),
+                    _buildExpandableChapter(ch6, '06', Icons.hub, !isVipUnlocked),
+                    _buildExpandableChapter(ch7, '07', Icons.share, !isVipUnlocked),
+                    _buildExpandableChapter(ch8, '08', Icons.auto_awesome_mosaic, !isVipUnlocked),
+                    _buildExpandableChapter(ch9, '09', Icons.lightbulb, !isVipUnlocked),
+                    _buildExpandableChapter(ch10, '10', Icons.library_books, !isVipUnlocked),
+
+                    const SizedBox(height: 28),
+                  ],
                 ),
-                _buildCleanOverviewCard(chart, isEn),
-                const SizedBox(height: 20),
-
-                // DANH SÁCH 10 CHƯƠNG CHUYÊN SÂU
-                _buildSectionHeader(
-                  isEn ? '10-CHAPTER COMPREHENSIVE REPORT' : '10 CHƯƠNG LUẬN GIẢI CHUYÊN SÂU (CHUẨN SÁCH & IHDS)',
-                  Icons.menu_book,
-                ),
-                const SizedBox(height: 8),
-
-                _buildExpandableChapter(ch1, '01', Icons.explore, false),
-                _buildExpandableChapter(ch2, '02', Icons.bolt, !isVipUnlocked),
-                _buildExpandableChapter(ch3, '03', Icons.compass_calibration, !isVipUnlocked),
-                _buildExpandableChapter(ch4, '04', Icons.polyline, !isVipUnlocked),
-                _buildExpandableChapter(ch5, '05', Icons.brightness_7, !isVipUnlocked),
-                _buildExpandableChapter(ch6, '06', Icons.hub, !isVipUnlocked),
-                _buildExpandableChapter(ch7, '07', Icons.share, !isVipUnlocked),
-                _buildExpandableChapter(ch8, '08', Icons.auto_awesome_mosaic, !isVipUnlocked),
-                _buildExpandableChapter(ch9, '09', Icons.lightbulb, !isVipUnlocked),
-                _buildExpandableChapter(ch10, '10', Icons.library_books, !isVipUnlocked),
-
-                const SizedBox(height: 28),
-              ],
+              ),
             ),
           ),
         );
@@ -193,6 +198,9 @@ class _VipReadingScreenState extends State<VipReadingScreen> {
         data: ThemeData.dark().copyWith(dividerColor: Colors.transparent),
         child: ExpansionTile(
           initiallyExpanded: num == '01' || num == '02',
+          expandedAlignment: Alignment.topLeft,
+          expandedCrossAxisAlignment: CrossAxisAlignment.start,
+          childrenPadding: EdgeInsets.zero,
           leading: Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             decoration: BoxDecoration(
@@ -226,44 +234,48 @@ class _VipReadingScreenState extends State<VipReadingScreen> {
               : null,
           trailing: isLocked ? const Icon(Icons.lock, color: AppTheme.textMuted, size: 18) : null,
           children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-              child: isLocked
-                  ? Container(
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF161826),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Row(
-                        children: const [
-                          Icon(Icons.lock_outline, color: AppTheme.goldLight, size: 18),
-                          SizedBox(width: 8),
-                          Expanded(
+            SizedBox(
+              width: double.infinity,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(16, 4, 16, 16),
+                child: isLocked
+                    ? Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF161826),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Row(
+                          children: const [
+                            Icon(Icons.lock_outline, color: AppTheme.goldLight, size: 18),
+                            SizedBox(width: 8),
+                            Expanded(
+                              child: Text(
+                                'Nội dung luận giải VIP chuyên sâu đã bị khóa. Vui lòng mở khóa để xem toàn bộ.',
+                                style: TextStyle(color: AppTheme.textMuted, fontSize: 11),
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    : Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: paragraphs.map((p) {
+                          return Padding(
+                            padding: const EdgeInsets.only(bottom: 10),
                             child: Text(
-                              'Nội dung luận giải VIP chuyên sâu đã bị khóa. Vui lòng mở khóa để xem toàn bộ.',
-                              style: TextStyle(color: AppTheme.textMuted, fontSize: 11),
+                              p,
+                              textAlign: TextAlign.left,
+                              style: const TextStyle(
+                                color: AppTheme.textSecondary,
+                                fontSize: 13,
+                                height: 1.6,
+                              ),
                             ),
-                          ),
-                        ],
+                          );
+                        }).toList(),
                       ),
-                    )
-                  : Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: paragraphs.map((p) {
-                        return Padding(
-                          padding: const EdgeInsets.only(bottom: 8),
-                          child: Text(
-                            p,
-                            style: const TextStyle(
-                              color: AppTheme.textSecondary,
-                              fontSize: 12.5,
-                              height: 1.55,
-                            ),
-                          ),
-                        );
-                      }).toList(),
-                    ),
+              ),
             ),
           ],
         ),

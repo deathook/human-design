@@ -75,26 +75,31 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
-          body: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _buildUserGreetingCard(user, isEn),
-                const SizedBox(height: 16),
+          body: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 880),
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    _buildUserGreetingCard(user, isEn),
+                    const SizedBox(height: 16),
 
-                _buildDailyTransitCard(sunTransit, isEn),
-                const SizedBox(height: 16),
+                    _buildDailyTransitCard(sunTransit, isEn),
+                    const SizedBox(height: 16),
 
-                _buildQuickActions(isEn),
-                const SizedBox(height: 16),
+                    _buildQuickActions(isEn),
+                    const SizedBox(height: 16),
 
-                _buildStrategyAdviceCard(user, isEn),
-                const SizedBox(height: 16),
+                    _buildStrategyAdviceCard(user, isEn),
+                    const SizedBox(height: 16),
 
-                _buildBookBanner(isEn),
-                const SizedBox(height: 24),
-              ],
+                    _buildBookBanner(isEn),
+                    const SizedBox(height: 24),
+                  ],
+                ),
+              ),
             ),
           ),
         );
@@ -426,7 +431,7 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  isEn ? 'THE HUMAN DESIGN BOOK' : 'SÁCH HUMAN DESIGN CHO NGƯỜI MỚI',
+                  isEn ? 'HUMAN DESIGN FOR BEGINNERS' : 'SÁCH HUMAN DESIGN CHO NGƯỜI MỚI BẮT ĐẦU',
                   style: const TextStyle(
                     color: AppTheme.goldLight,
                     fontSize: 12,
@@ -436,8 +441,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(height: 4),
                 Text(
                   isEn
-                      ? 'Exclusive authorship by TH Group & Ngô Xuân Hội. Complete analysis of 64 gates, 36 channels & 9 centers.'
-                      : 'Tác quyền độc quyền TH Group - Tinh Hoa Bản Mệnh • Ngô Xuân Hội. Luận giải chi tiết 64 cổng, 36 kênh & 9 trung tâm.',
+                      ? 'Exclusive authorship by TH Group - Tinh Hoa Bản Mệnh. Complete analysis of 64 gates, 36 channels & 9 centers.'
+                      : 'Tác quyền độc quyền TH Group - Tinh Hoa Bản Mệnh. Luận giải chi tiết 64 cổng, 36 kênh & 9 trung tâm.',
                   style: const TextStyle(color: AppTheme.textSecondary, fontSize: 11, height: 1.4),
                 ),
               ],

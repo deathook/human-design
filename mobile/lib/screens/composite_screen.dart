@@ -224,10 +224,13 @@ class _CompositeScreenState extends State<CompositeScreen> {
               ),
             ],
           ),
-          body: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          body: Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 880),
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 // 1. THẺ CHỌN 2 HỒ SƠ TỪ BỘ NHỚ LOCAL (HOÀN TOÀN KHÔNG TỰ ĐIỀN ẢO)
                 _buildCoupleSelectorCard(isEn),
@@ -293,8 +296,10 @@ class _CompositeScreenState extends State<CompositeScreen> {
               ],
             ),
           ),
-        );
-      },
+        ),
+      ),
+    );
+  }
     );
   }
 
